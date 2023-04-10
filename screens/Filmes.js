@@ -1,14 +1,16 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Card } from 'react-native-paper';
+import { StyleSheet, View, ScrollView } from 'react-native';
 import { DefaultTheme } from 'react-native-paper';
+import BibliotecaFilmes from '../src/components/BibliotecaFilmes';
+import HeaderFilmes from '../src/components/HeaderFIlmes';
 
 export default function Filmes () {
   return (
     <View style={styles.container}>
-      <Card style={styles.card}>
-        <Card.Title title="Esta é a tela de Filmes" />
-      </Card>
+      <HeaderFilmes />
+      <ScrollView>
+        <BibliotecaFilmes />
+      </ScrollView>
     </View>
   );
 }
@@ -21,7 +23,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 10
   },
-  card: {
-    width: '90%'
-  }
-});
+})

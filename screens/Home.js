@@ -20,13 +20,6 @@ export default function Home ({navigation}) {
           </Button>
         </Card.Content>
       </Card>
-      <Card style={styles.card}>
-        <Card.Content>
-          <Button mode="contained" onPress={() => navigation.navigate('Series')}>
-            Séries 
-          </Button>
-        </Card.Content>
-      </Card>
     </ScrollView>
   )
 }

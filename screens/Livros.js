@@ -1,14 +1,16 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Card } from 'react-native-paper';
-import { DefaultTheme } from 'react-native-paper';
+import React from "react";
+import { StyleSheet, View, ScrollView } from "react-native";
+import { DefaultTheme } from "react-native-paper";
+import Biblioteca from "../src/components/Biblioteca";
+import Header from "../src/components/Header";
 
-export default function Livros () {
+export default function Livros() {
   return (
     <View style={styles.container}>
-      <Card style={styles.card}>
-        <Card.Title title="Esta é a tela de livros" />
-      </Card>
+      <Header />
+      <ScrollView>
+        <Biblioteca />
+      </ScrollView>
     </View>
   );
 }
@@ -16,12 +18,9 @@ export default function Livros () {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
+    flexDirection: "column",
     backgroundColor: DefaultTheme.colors.background,
-    alignItems: 'center',
-    paddingTop: 10
+    alignItems: "center",
+    paddingTop: 10,
   },
-  card: {
-    width: '90%'
-  }
-});
+})
