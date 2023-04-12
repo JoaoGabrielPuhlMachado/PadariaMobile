@@ -103,14 +103,6 @@ const styles = StyleSheet.create({
     marginTop: 3,
     fontWeight: "bold",
   },
-  preco: {
-    fontWeight: "bold",
-    fontSize: 13,
-    color: "#000",
-    marginLeft: 3,
-    marginRight: 3,
-    marginTop: 3,
-  },
   content: {
     flex: 1,
     justifyContent: "center",
