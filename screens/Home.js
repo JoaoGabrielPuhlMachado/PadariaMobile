@@ -46,6 +46,6 @@ const styles = StyleSheet.create({
   },
   botao: {
     borderRadius: 5,
-    backgroundColor: "#6600ff",
+    backgroundColor: "#0099ff",
   },
 });

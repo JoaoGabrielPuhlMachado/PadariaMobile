@@ -61,17 +61,20 @@ export default function Biblioteca() {
 
 const styles = StyleSheet.create({
   imagem: {
+    marginLeft: "auto",
+    marginRight: "auto",
     width: "100%",
     height: "70%",
-    resizeMode: "stretch",
+    borderRadius: 2,
   },
   card: {
+    padding: 8,
     backgroundColor: "#fff",
-    width: "44%",
+    width: "45%",
     height: 350,
     borderRadius: 0,
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 8,
+    marginRight: 8,
     marginTop: 30,
   },
   texto: {
