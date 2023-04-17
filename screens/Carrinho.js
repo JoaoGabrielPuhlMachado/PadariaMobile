@@ -1,15 +1,13 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 import { DefaultTheme } from "react-native-paper";
-import Biblioteca from "../src/components/Biblioteca";
-import Header from "../src/components/Header";
+import PedidosCarrinho from "../src/components/PedidosCarrinho";
 
-export default function Livros() {
+export default function Carrinho() {
   return (
     <View style={styles.container}>
-      <Header />
       <ScrollView>
-        <Biblioteca />
+        <PedidosCarrinho />
       </ScrollView>
     </View>
   );
@@ -18,9 +16,9 @@ export default function Livros() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: "column",
+    flexDirection: 'column',
     backgroundColor: DefaultTheme.colors.background,
-    alignItems: "center",
+    alignItems: 'center',
     paddingTop: 10,
   },
 })

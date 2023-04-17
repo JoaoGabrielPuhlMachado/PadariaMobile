@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default class Contador extends Component {
+export default class ContadorCarrinho extends Component {
   state = {
     contador: 0,
   };

@@ -1,5 +1,5 @@
 import React from "react";
-import { ScrollView, StyleSheet, Text } from "react-native";
+import { ScrollView, StyleSheet } from "react-native";
 import { Button, Card } from "react-native-paper";
 import { DefaultTheme } from "react-native-paper";
 
@@ -11,9 +11,9 @@ export default function Home({ navigation }) {
           <Button
             style={styles.botao}
             mode="contained"
-            onPress={() => navigation.navigate("Livros")}
+            onPress={() => navigation.navigate("Atendente")}
           >
-            Livros
+            Atendente
           </Button>
         </Card.Content>
       </Card>
@@ -22,9 +22,9 @@ export default function Home({ navigation }) {
           <Button
             style={styles.botao}
             mode="contained"
-            onPress={() => navigation.navigate("Filmes")}
+            onPress={() => navigation.navigate("Carrinho")}
           >
-            Filmes
+            Carrinho
           </Button>
         </Card.Content>
       </Card>
