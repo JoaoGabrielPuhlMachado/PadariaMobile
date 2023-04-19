@@ -15,33 +15,19 @@ export default class ContadorCarrinho extends Component {
   }
   render() {
     return (
-      <View
-        style={{
-          flexDirection: "row",
-          alignItems: "center",
-          flex: 1,
-          justifyContent: "space-between",
-          margin: 0,
-          width: "100%",
-          height: 20,
-        }}
-      >
-        <Text style={styles.contador}>{this.state.contador}</Text>
-        <View style={{ flexDirection: "row", marginRight: 10 }}>
+      <View>
+        <View
+          style={{
+            flexDirection: "row",
+            marginRight: 10,
+            alignItems: "center",
+          }}
+        >
           <Button title="+" onPress={() => this.incrementar()} />
+          <Text style={{ backgroundColor: "#eeeeee", padding: 8,}}>{this.state.contador}</Text>
           <Button title="-" onPress={() => this.decrementar()} />
         </View>
       </View>
     );
   }
 }
-const styles = StyleSheet.create({
-  contador: {
-    paddingLeft: 14,
-    paddingRight: 14,
-    paddingBottom: 6,
-    paddingTop: 6,
-    backgroundColor: "#eee",
-    marginLeft: 10,
-  },
-});

@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     borderRadius: 5,
     marginBottom: 20,
+    backgroundColor: "#efefef",
   },
   botao: {
     borderRadius: 5,

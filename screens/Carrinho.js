@@ -1,24 +1,13 @@
 import React from "react";
-import { StyleSheet, View, ScrollView } from "react-native";
-import { DefaultTheme } from "react-native-paper";
+import { View, ScrollView } from "react-native";
 import PedidosCarrinho from "../src/components/PedidosCarrinho";
 
 export default function Carrinho() {
   return (
-    <View style={styles.container}>
+    <View>
       <ScrollView>
         <PedidosCarrinho />
       </ScrollView>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    flexDirection: 'column',
-    backgroundColor: DefaultTheme.colors.background,
-    alignItems: 'center',
-    paddingTop: 10,
-  },
-})

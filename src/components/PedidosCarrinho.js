@@ -4,10 +4,16 @@ import ContadorCarrinho from "./ContadorCarrinho";
 function Card(props) {
   return (
     <View style={styles.card}>
-      <Image style={styles.imagem} source={{ uri: props.carrinho.capa }} />
-      <Text style={styles.texto}> {props.carrinho.titulo} </Text>
-      <Text style={styles.preco}> {props.carrinho.preco} </Text>
-      <ContadorCarrinho />
+      <View style={styles.lado}>
+        <Image style={styles.imagem} source={{ uri: props.carrinho.capa }} />
+        <View>
+          <Text style={styles.texto}> {props.carrinho.titulo} </Text>
+          <Text style={styles.preco}> R${props.carrinho.preco.toFixed(2)}{props.carrinho.tipo} </Text>
+        </View>
+        <View style={styles.conta}>
+          <ContadorCarrinho />
+        </View>
+      </View>
     </View>
   );
 }
@@ -17,42 +23,50 @@ export default function PedidosCarrinho() {
     {
       capa: "https://panattos.com.br/uploads/produtos/2017/07/pao-frances-fermentacao-super-longa-massa-congelada.jpg",
       titulo: "Pão Frances",
-      preco: "R$ 11,00 Kg",
+      preco: 11.00,
+      tipo: "Kg",
     },
     {
       capa: "https://img.itdg.com.br/tdg/images/recipes/000/027/684/264552/264552_original.jpg?w=1200",
       titulo: "Bolo de Chocolate",
-      preco: "R$ 14,50 Un.",
+      preco: 14.50,
+      tipo: "Un.",
     },
     {
       capa: "https://nacolher.com/wp-content/uploads/2022/08/cuca-de-banana-simples.jpg",
       titulo: "Cuca de Banana",
-      preco: "R$ 12,70 Un.",
+      preco: 12.70,
+      tipo: "Un.",
     },
     {
       capa: "https://priscilapiardi.com/wp-content/uploads/2021/01/Editada-IMG_9018-scaled.jpg.webp",
       titulo: "Sonho",
-      preco: "R$ 3,00 Un.",
+      preco: 3.00,
+      tipo: "Un.",
     },
     {
       capa: "https://mestredaculinaria.com.br/wp-content/uploads/2021/09/Torta-de-Limao-Simples-802x1002.png",
       titulo: "Torta de Limão",
-      preco: "R$ 50,50 Kg",
+      preco: 50.50,
+      tipo: "Kg.",
     },
     {
       capa: "https://revistasaboresdosul.com.br/wp-content/uploads/2016/02/massinha-doce.jpg",
-      titulo: "Chinique",
-      preco: "R$ 2,50 Un.",
+      titulo: "Chineque",
+      preco: 2.50,
+      tipo: "Un.",
     },
     {
       capa: "https://giassi.vtexassets.com/arquivos/ids/511082/Rosca-de-Polvilho-Salgada-Assada-Giassi-Kg--.png?v=637995027227670000",
       titulo: "Rosca",
-      preco: "R$ 11,00 Un.",
+      preco: 11.00,
+      tipo: "Un.",
     },
     {
       capa: "https://comidinhasdochef.com/wp-content/uploads/2020/03/P%C3%A3o-de-Leite-Fofinho.jpg",
       titulo: "Pão de Leite",
-      preco: "R$ 9,70 Un.",
+      preco: 9.70,
+      tipo: "Un.",
     },
   ];
 
@@ -71,20 +85,21 @@ export default function PedidosCarrinho() {
 
 const styles = StyleSheet.create({
   imagem: {
-    marginRight: "auto",
     width: "25%",
-    height: "50%",
+    height: "95%",
+    marginTop: "auto",
+    marginBottom: "auto",
     borderRadius: 2,
   },
   card: {
     padding: 8,
     backgroundColor: "#fff",
-    width: "100%",
-    height: 200,
+    width: "95%",
+    height: 100,
     borderRadius: 0,
-    marginLeft: 8,
-    marginRight: 8,
-    marginTop: 30,
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginTop: 10,
   },
   texto: {
     fontSize: 13,
@@ -101,12 +116,14 @@ const styles = StyleSheet.create({
     marginRight: 3,
     marginTop: 3,
   },
+  lado: {
+    flexDirection: "row",
+    height: "100%",
+  },
   content: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
     backgroundColor: "#e0dae6",
-    flexDirection: "column",
-    flexWrap: "wrap",
+  },
+  conta: {
+    marginLeft: "auto",
   },
 });
