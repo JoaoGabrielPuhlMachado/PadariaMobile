@@ -2,11 +2,9 @@ import React, { Component } from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default class ContadorCarrinho extends Component {
-  constructor() {
-    this.state = {
+  state = {
     contador: 0,
   };
-  }
   incrementar() {
     this.setState({ contador: this.state.contador + 1 });
   }
@@ -14,9 +12,6 @@ export default class ContadorCarrinho extends Component {
     if (this.state.contador > 0) {
       this.setState({ contador: this.state.contador - 1 });
     }
-  }
-  total() {
-    this.setState({contador: this.state.contador});
   }
   render() {
     return (

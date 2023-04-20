@@ -1,13 +1,9 @@
-import ContadorCarrinho from "./ContadorCarrinho";
-
-
 export const pedidoscarrinho = [
   {
     capa: "https://panattos.com.br/uploads/produtos/2017/07/pao-frances-fermentacao-super-longa-massa-congelada.jpg",
     titulo: "Pão Frances",
     preco: 11.0,
     tipo: "Kg",
-    total: ContadorCarrinho.state.contador * preco,
   },
   {
     capa: "https://img.itdg.com.br/tdg/images/recipes/000/027/684/264552/264552_original.jpg?w=1200",
@@ -31,7 +27,7 @@ export const pedidoscarrinho = [
     capa: "https://mestredaculinaria.com.br/wp-content/uploads/2021/09/Torta-de-Limao-Simples-802x1002.png",
     titulo: "Torta de Limão",
     preco: 50.5,
-    tipo: "Kg.",
+    tipo: "Kg",
   },
   {
     capa: "https://revistasaboresdosul.com.br/wp-content/uploads/2016/02/massinha-doce.jpg",

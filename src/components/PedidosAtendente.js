@@ -7,7 +7,7 @@ function Card(props) {
     <View style={styles.card}>
       <Image style={styles.imagem} source={{ uri: props.pedido.capa }} />
       <Text style={styles.texto}> {props.pedido.titulo} </Text>
-      <Text style={styles.preco}> {props.pedido.preco} </Text>
+      <Text style={styles.preco}> R${props.pedido.preco.toFixed(2)} {props.pedido.tipo} </Text>
       <ContadorAtendente />
     </View>
   );

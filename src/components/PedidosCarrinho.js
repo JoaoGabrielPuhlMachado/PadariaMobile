@@ -1,8 +1,12 @@
 import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
 import ContadorCarrinho from "./ContadorCarrinho";
-import { pedidoscarrinho } from "./InfoPedidos";
+import { pedidoscarrinho, total } from "./InfoPedidos";
 
 function Card(props) {
+  const preco = props.carrinho.preco;
+  const contador = ContadorCarrinho.state.contador;
+  const total = preco * contador;
+  
   return (
     <View style={styles.card}>
       <View style={styles.lado}>
@@ -10,7 +14,7 @@ function Card(props) {
         <View>
           <Text style={styles.texto}> {props.carrinho.titulo} </Text>
           <Text style={styles.preco}> R${props.carrinho.preco.toFixed(2)}{props.carrinho.tipo}  </Text>
-          <Text style={styles.preco}> R${props.carrinho.preco.toFixed(2)} </Text>
+          <Text style={styles.preco}> R${total} </Text>
         </View>
         <View style={styles.contador}>
           <ContadorCarrinho />
