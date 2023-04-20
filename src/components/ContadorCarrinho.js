@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 
 export default class ContadorCarrinho extends Component {
   state = {
@@ -16,18 +16,18 @@ export default class ContadorCarrinho extends Component {
   render() {
     return (
       <View>
-        <View
-          style={{
-            flexDirection: "row",
-            marginRight: 10,
-            alignItems: "center",
-          }}
-        >
-          <Button title="+" onPress={() => this.incrementar()} />
-          <Text style={{ backgroundColor: "#eeeeee", padding: 8,}}>{this.state.contador}</Text>
-          <Button title="-" onPress={() => this.decrementar()} />
+        <View style={{flexDirection: "row",marginRight: 10,alignItems: "center",}}>
+          <TouchableOpacity style={[styles.button, {borderBottomLeftRadius: 5, borderTopLeftRadius: 5,}]} onPress={() => this.incrementar()}><Text>+</Text></TouchableOpacity>
+          <Text style={{ backgroundColor: "#eeeeee", padding: 8 }}>{this.state.contador}</Text>
+          <TouchableOpacity style={[styles.button, {borderBottomRightRadius: 5, borderTopRightRadius: 5,}]} onPress={() => this.decrementar()}><Text>-</Text></TouchableOpacity>
         </View>
       </View>
     );
   }
 }
+const styles = StyleSheet.create({
+  button: {
+    padding: 8,
+    backgroundColor: "#e0dae6",
+  },
+});

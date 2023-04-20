@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     marginRight: "auto",
     width: "100%",
     height: "50%",
-    borderRadius: 2,
+    borderRadius: 3,
   },
   card: {
     padding: 8,
@@ -85,7 +85,8 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     marginLeft: 8,
     marginRight: 8,
-    marginTop: 30,
+    marginTop: 15,
+    borderRadius: 3,
   },
   texto: {
     fontSize: 13,

@@ -10,7 +10,7 @@ function Card(props) {
           <Text style={styles.texto}> {props.carrinho.titulo} </Text>
           <Text style={styles.preco}> R${props.carrinho.preco.toFixed(2)}{props.carrinho.tipo} </Text>
         </View>
-        <View style={styles.conta}>
+        <View style={styles.contador}>
           <ContadorCarrinho />
         </View>
       </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     height: "95%",
     marginTop: "auto",
     marginBottom: "auto",
-    borderRadius: 2,
+    borderRadius: 3,
   },
   card: {
     padding: 8,
@@ -99,7 +99,9 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 10,
+    marginTop: 5,
+    marginBottom: 5,
+    borderRadius: 3,
   },
   texto: {
     fontSize: 13,
@@ -123,7 +125,8 @@ const styles = StyleSheet.create({
   content: {
     backgroundColor: "#e0dae6",
   },
-  conta: {
+  contador: {
     marginLeft: "auto",
+    justifyContent: "center",
   },
 });
