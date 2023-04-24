@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
-export default class ContadorAtendente extends Component {
+export default class ContadorItens extends Component {
   state = {
-    contador: 0,
+    contador: 100,
   };
   incrementar() {
     this.setState({ contador: this.state.contador + 1 });

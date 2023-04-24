@@ -1,5 +1,5 @@
 import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
-import ContadorAtendente from "./ContadorAtendente";
+import ContadorItens from "./ContadorItens";
 import { pedidoscarrinho } from "./InfoPedidos";
 
 function Card(props) {
@@ -8,12 +8,12 @@ function Card(props) {
       <Image style={styles.imagem} source={{ uri: props.pedido.capa }} />
       <Text style={styles.texto}> {props.pedido.titulo} </Text>
       <Text style={styles.preco}> R${props.pedido.preco.toFixed(2)} {props.pedido.tipo} </Text>
-      <ContadorAtendente />
+      <ContadorItens />
     </View>
   );
 }
 
-export default function PedidosAtendente() {
+export default function PedidosItens() {
   return (
     <ScrollView>
       <View>

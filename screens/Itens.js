@@ -1,13 +1,13 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
 import { DefaultTheme } from "react-native-paper";
-import PedidosAtendente from "../src/components/PedidosAtendente";
+import PedidosItens from "../src/components/PedidosItens";
 
 export default function Atendente() {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <PedidosAtendente />
+        <PedidosItens />
       </ScrollView>
     </View>
   );

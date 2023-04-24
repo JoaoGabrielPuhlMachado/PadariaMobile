@@ -1,52 +1,55 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
-import { Button, Card } from "react-native-paper";
+import {
+  StyleSheet,
+  TouchableOpacity,
+  Text,
+  View,
+} from "react-native";
 import { DefaultTheme } from "react-native-paper";
 
 export default function Home({ navigation }) {
   return (
-    <ScrollView style={styles.scrollView}>
-      <Card style={styles.card}>
-        <Card.Content>
-          <Button
-            style={styles.botao}
-            mode="contained"
-            onPress={() => navigation.navigate("Atendente")}
+        <View style={styles.card}>
+          <TouchableOpacity
+            style={[
+              styles.botao,
+              { borderRightColor: "white", borderRightWidth: 1 },
+            ]}
+            onPress={() => navigation.navigate("Itens")}
           >
-            Atendente
-          </Button>
-        </Card.Content>
-      </Card>
-      <Card style={styles.card}>
-        <Card.Content>
-          <Button
+            <Text style={styles.texto}>Itens</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
             style={styles.botao}
-            mode="contained"
-            onPress={() => navigation.navigate("Carrinho")}
+            onPress={() => navigation.navigate("Clientes")}
           >
-            Carrinho
-          </Button>
-        </Card.Content>
-      </Card>
-    </ScrollView>
+            <Text style={styles.texto}>Clientes</Text>
+          </TouchableOpacity>
+        </View>
   );
 }
 
 const styles = StyleSheet.create({
   scrollView: {
     backgroundColor: DefaultTheme.colors.background,
-    paddingTop: 20,
   },
   card: {
-    width: "70%",
-    marginRight: "auto",
-    marginLeft: "auto",
-    borderRadius: 5,
-    marginBottom: 20,
-    backgroundColor: "#efefef",
+    height: 1390,
+    flexDirection: "row",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: DefaultTheme.colors.background,
   },
   botao: {
     borderRadius: 5,
-    backgroundColor: "#0099ff",
+    height: 40,
+    width: "50%",
+    backgroundColor: "#e0dae6",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  texto: {
+    fontWeight: "bold",
+    fontSize: 17,
   },
 });
