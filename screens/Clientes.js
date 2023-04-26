@@ -1,41 +1,29 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
 import { DefaultTheme } from "react-native-paper";
+import { infoclientes } from "../src/components/InfoClientes";
+
+function DadosCliente(props) {
+  return (
+    <View style={styles.centro}>
+      <TouchableOpacity
+        style={styles.botao}
+        onPress={() => props.navigation.navigate("Carrinho")}
+      >
+        <Text style={styles.texto}>Ficha: {props.cliente.ficha}</Text>
+      </TouchableOpacity>
+      <Text style={styles.status}>{props.cliente.status}</Text>
+    </View>
+  );
+}
 
 export default function Clientes({ navigation }) {
   return (
     <View style={styles.padrao}>
-      <View style={styles.card}>
-        <TouchableOpacity
-          style={styles.botao}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
-          <Text style={styles.texto}>Cliente 001</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botao}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
-          <Text style={styles.texto}>Cliente 002</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botao}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
-          <Text style={styles.texto}>Cliente 003</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botao}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
-          <Text style={styles.texto}>Cliente 004</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={styles.botao}
-          onPress={() => navigation.navigate("Carrinho")}
-        >
-          <Text style={styles.texto}>Cliente 005</Text>
-        </TouchableOpacity>
+      <View>
+        {infoclientes.map((cliente) => (
+          <DadosCliente cliente={cliente} navigation={navigation} />
+        ))}
       </View>
       <View style={styles.add}>
         <TouchableOpacity
@@ -49,22 +37,22 @@ export default function Clientes({ navigation }) {
   );
 }
 const styles = StyleSheet.create({
-  add: {
+  status: {
+    fontSize: 17,
+  },
+  centro: {
     alignItems: "center",
   },
   padrao: {
     backgroundColor: DefaultTheme.colors.background,
-  },
-  card: {
-    height: 673,
-    flexDirection: "column",
-    alignItems: "center",
+    flex: 1,
+    justifyContent: "space-between",
   },
   botao: {
     borderRadius: 5,
     height: 40,
     width: "50%",
-    backgroundColor: "#e0dae6",
+    backgroundColor: "#f1ebf7",
     alignItems: "center",
     justifyContent: "center",
     marginTop: 15,
@@ -72,12 +60,12 @@ const styles = StyleSheet.create({
   botaoadd: {
     height: 45,
     width: "100%",
-    backgroundColor: "#e0dae6",
+    backgroundColor: "#f1ebf7",
     alignItems: "center",
     justifyContent: "center",
   },
   texto: {
     fontWeight: "bold",
-    fontSize: 17,
+    fontSize: 20,
   },
 });

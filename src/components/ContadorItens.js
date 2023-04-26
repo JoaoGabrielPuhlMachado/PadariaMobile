@@ -41,12 +41,12 @@ const styles = StyleSheet.create({
     paddingRight: 14,
     paddingBottom: 6,
     paddingTop: 6,
-    backgroundColor: "#eee",
+    backgroundColor: "#eaeaea",
     marginLeft: 10,
     borderRadius: 3,
   },
   button: {
     padding: 8,
-    backgroundColor: "#e0dae6",
+    backgroundColor: "#f1ebf7",
   },
 });

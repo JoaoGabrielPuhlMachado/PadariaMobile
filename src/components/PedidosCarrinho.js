@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
     height: "100%",
   },
   content: {
-    backgroundColor: "#e0dae6",
+    backgroundColor: "#f1ebf7",
   },
   contador: {
     marginLeft: "auto",
