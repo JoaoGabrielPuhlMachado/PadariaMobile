@@ -1,13 +1,17 @@
 import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
+import BarraPesquisa from "./BarraPesquisa";
 import ContadorItens from "./ContadorItens";
-import { pedidoscarrinho } from "./InfoPedidos";
+import { infoprodutos } from "./InfoProdutos";
 
 function Card(props) {
   return (
     <View style={styles.card}>
       <Image style={styles.imagem} source={{ uri: props.pedido.capa }} />
       <Text style={styles.texto}> {props.pedido.titulo} </Text>
-      <Text style={styles.preco}> R${props.pedido.preco.toFixed(2)} {props.pedido.tipo} </Text>
+      <Text style={styles.preco}>
+        {" "}
+        R${props.pedido.preco.toFixed(2)} {props.pedido.tipo}{" "}
+      </Text>
       <ContadorItens />
     </View>
   );
@@ -17,8 +21,9 @@ export default function PedidosItens() {
   return (
     <ScrollView>
       <View>
+        <BarraPesquisa />
         <View style={styles.content}>
-          {pedidoscarrinho.map((pedido) => (
+          {infoprodutos.map((pedido) => (
             <Card pedido={pedido} />
           ))}
         </View>

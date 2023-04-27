@@ -1,6 +1,6 @@
 import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
 import ContadorCarrinho from "./ContadorCarrinho";
-import { pedidoscarrinho } from "./InfoPedidos";
+import { infoprodutos } from "./InfoProdutos";
 
 function Card(props) {
   return (
@@ -27,7 +27,7 @@ export default function PedidosCarrinho() {
     <ScrollView>
       <View>
         <View style={styles.content}>
-          {pedidoscarrinho.map((carrinho) => (
+          {infoprodutos.map((carrinho) => (
             <Card carrinho={carrinho} />
           ))}
         </View>
