@@ -1,7 +1,7 @@
 import React from "react";
 import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
-import { DefaultTheme } from "react-native-paper";
 import { infoclientes } from "../src/components/InfoClientes";
+import BarraPesquisaClientes from "../src/components/BarraPesquisaClientes";
 
 function DadosCliente(props) {
   return (
@@ -20,6 +20,7 @@ function DadosCliente(props) {
 export default function Clientes({ navigation }) {
   return (
     <View style={styles.padrao}>
+      <BarraPesquisaClientes />
       <View>
         {infoclientes.map((cliente) => (
           <DadosCliente cliente={cliente} navigation={navigation} />
@@ -44,7 +45,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   padrao: {
-    backgroundColor: DefaultTheme.colors.background,
+    backgroundColor: '#f1ebf7',
     flex: 1,
     justifyContent: "space-between",
   },
@@ -52,7 +53,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     height: 40,
     width: "50%",
-    backgroundColor: "#f1ebf7",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
     marginTop: 15,
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
   botaoadd: {
     height: 45,
     width: "100%",
-    backgroundColor: "#f1ebf7",
+    backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
   },

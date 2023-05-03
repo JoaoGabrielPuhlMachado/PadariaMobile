@@ -1,5 +1,5 @@
 import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
-import BarraPesquisa from "./BarraPesquisa";
+import BarraPesquisaItens from "./BarraPesquisaItens";
 import ContadorItens from "./ContadorItens";
 import { infoprodutos } from "./InfoProdutos";
 
@@ -7,10 +7,9 @@ function Card(props) {
   return (
     <View style={styles.card}>
       <Image style={styles.imagem} source={{ uri: props.pedido.capa }} />
-      <Text style={styles.texto}> {props.pedido.titulo} </Text>
+      <Text style={styles.texto}>{props.pedido.titulo} </Text>
       <Text style={styles.preco}>
-        {" "}
-        R${props.pedido.preco.toFixed(2)} {props.pedido.tipo}{" "}
+        R${props.pedido.preco.toFixed(2).replace(".", ",")} {props.pedido.tipo}
       </Text>
       <ContadorItens />
     </View>
@@ -21,7 +20,7 @@ export default function PedidosItens() {
   return (
     <ScrollView>
       <View>
-        <BarraPesquisa />
+        <BarraPesquisaItens />
         <View style={styles.content}>
           {infoprodutos.map((pedido) => (
             <Card pedido={pedido} />

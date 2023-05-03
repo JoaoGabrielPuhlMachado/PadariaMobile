@@ -18,7 +18,8 @@
     "react-native": "0.71.4",
     "react-native-elements": "^3.4.3",
     "react-native-paper": "^5.6.0",
-    "react-native-reanimated": "^3.0.2"
+    "react-native-reanimated": "^3.0.2",
+    "unorm": "^1.6.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"

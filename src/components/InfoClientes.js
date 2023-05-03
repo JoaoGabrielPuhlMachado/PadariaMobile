@@ -19,7 +19,7 @@ export const infoclientes = [
   },
   {
     nomecliente: "Cliente 004",
-    status: "Em andamento",
+    status: "Concluído",
     ficha: 24,
     id_cliente: 4,
   },

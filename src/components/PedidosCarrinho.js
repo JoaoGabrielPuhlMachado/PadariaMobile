@@ -8,9 +8,9 @@ function Card(props) {
       <View style={styles.lado}>
         <Image style={styles.imagem} source={{ uri: props.carrinho.capa }} />
         <View>
-          <Text style={styles.texto}>{props.carrinho.titulo} </Text>
+          <Text style={styles.texto}>{props.carrinho.titulo}</Text>
           <Text style={styles.preco}>
-            R${props.carrinho.preco.toFixed(2)}
+            R${props.carrinho.preco.toFixed(2).replace(".", ",")}{" "}
             {props.carrinho.tipo}
           </Text>
         </View>
