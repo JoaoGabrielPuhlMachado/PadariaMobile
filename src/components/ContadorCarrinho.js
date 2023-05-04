@@ -17,7 +17,7 @@ export default class ContadorCarrinho extends Component {
     return (
       <View>
         <View>
-          <Text style={styles.texto}>Deletar</Text>
+          <TouchableOpacity><Text style={styles.texto}>Deletar</Text></TouchableOpacity>
         </View>
         <View style={{flexDirection: "row",marginRight: 10,alignItems: "center",}}>
           <TouchableOpacity style={[styles.button, {borderBottomLeftRadius: 5, borderTopLeftRadius: 5,}]} onPress={() => this.incrementar()}><Text>+</Text></TouchableOpacity>
