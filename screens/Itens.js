@@ -1,6 +1,5 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
-import { DefaultTheme } from "react-native-paper";
 import PedidosItens from "../src/components/PedidosItens";
 
 export default function Atendente() {
@@ -17,7 +16,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: DefaultTheme.colors.background,
     alignItems: 'center',
     backgroundColor: "#f1ebf7",
     },

@@ -16,6 +16,9 @@ export default class ContadorCarrinho extends Component {
   render() {
     return (
       <View>
+        <View>
+          <Text style={styles.texto}>Deletar</Text>
+        </View>
         <View style={{flexDirection: "row",marginRight: 10,alignItems: "center",}}>
           <TouchableOpacity style={[styles.button, {borderBottomLeftRadius: 5, borderTopLeftRadius: 5,}]} onPress={() => this.incrementar()}><Text>+</Text></TouchableOpacity>
           <Text style={{ backgroundColor: "#f1ebfa", padding: 8 }}>{this.state.contador}</Text>
@@ -29,5 +32,14 @@ const styles = StyleSheet.create({
   button: {
     padding: 8,
     backgroundColor: "#f1ebf7",
+  },
+  texto: {
+    alignSelf: "center",
+    padding: 8,
+    backgroundColor: "#f1ebf7",
+    fontSize: 10,
+    borderRadius: 5,
+    marginRight: 10,
+    marginBottom: 10,
   },
 });

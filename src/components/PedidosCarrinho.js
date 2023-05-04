@@ -1,4 +1,11 @@
-import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
+import {
+  StyleSheet,
+  Image,
+  Text,
+  View,
+  ScrollView,
+  TouchableOpacity,
+} from "react-native";
 import ContadorCarrinho from "./ContadorCarrinho";
 import { infoprodutos } from "./InfoProdutos";
 
@@ -10,7 +17,7 @@ function Card(props) {
         <View>
           <Text style={styles.texto}>{props.carrinho.titulo}</Text>
           <Text style={styles.preco}>
-            R${props.carrinho.preco.toFixed(2).replace(".", ",")}{" "}
+            R${props.carrinho.preco.toFixed(2).replace(".", ",")}
             {props.carrinho.tipo}
           </Text>
         </View>
@@ -22,21 +29,30 @@ function Card(props) {
   );
 }
 
-export default function PedidosCarrinho() {
+export default function PedidosCarrinho({ navigation }) {
   return (
-    <ScrollView>
+    <ScrollView style={styles.background}>
+      <View style={styles.content}>
+        {infoprodutos.map((carrinho) => (
+          <Card carrinho={carrinho} />
+        ))}
+      </View>
       <View>
-        <View style={styles.content}>
-          {infoprodutos.map((carrinho) => (
-            <Card carrinho={carrinho} />
-          ))}
-        </View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Clientes")}
+          style={styles.botaoadd}
+        >
+          <Text style={styles.textobotao}>Salvar Cliente</Text>
+        </TouchableOpacity>
       </View>
     </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  background: {
+    backgroundColor: "#f1ebf7",
+  },
   imagem: {
     width: "25%",
     height: "95%",
@@ -53,7 +69,7 @@ const styles = StyleSheet.create({
     marginLeft: "auto",
     marginRight: "auto",
     marginTop: 5,
-    marginBottom: 5,
+    marginBottom: 0,
     borderRadius: 3,
   },
   texto: {
@@ -62,6 +78,18 @@ const styles = StyleSheet.create({
     marginLeft: 3,
     marginRight: 3,
     marginTop: 3,
+  },
+  botaoadd: {
+    height: 45,
+    width: "100%",
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    marginTop: 10,
+  },
+  textobotao: {
+    fontSize: 20,
+    fontWeight: "bold",
   },
   preco: {
     fontWeight: "bold",

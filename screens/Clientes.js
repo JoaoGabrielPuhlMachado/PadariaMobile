@@ -19,7 +19,7 @@ function DadosCliente(props) {
 
 export default function Clientes({ navigation }) {
   return (
-    <View style={styles.padrao}>
+    <View style={styles.background}>
       <BarraPesquisaClientes />
       <View>
         {infoclientes.map((cliente) => (
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
   centro: {
     alignItems: "center",
   },
-  padrao: {
+  background: {
     backgroundColor: '#f1ebf7',
     flex: 1,
     justifyContent: "space-between",

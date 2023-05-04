@@ -41,13 +41,13 @@ const styles = StyleSheet.create({
   },
   card: {
     padding: 8,
-    backgroundColor: "#fff",
-    width: "45%",
+    backgroundColor: "white",
+    width: "46.5%",
     height: 200,
     borderRadius: 0,
-    marginLeft: 8,
-    marginRight: 8,
-    marginTop: 15,
+    marginLeft: "1.5%",
+    marginRight: "1.5%",
+    marginTop: 12,
     borderRadius: 3,
   },
   texto: {

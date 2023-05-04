@@ -9,7 +9,7 @@ export default function BarraPesquisaClientes() {
 
   const filteredClientes = infoclientes.filter((cliente) => {
     const normalizedSearchValue = normalize(searchValue).toLowerCase();
-    const normalizedClienteTitle = normalize(cliente.nomecliente).toLowerCase();
+    const normalizedClienteTitle = normalize(cliente.ficha).toLowerCase();
 
     return normalizedClienteTitle.includes(normalizedSearchValue);
   });
@@ -23,7 +23,7 @@ export default function BarraPesquisaClientes() {
   return (
     <View>
       <SearchBar
-        placeholder="Pesquisar Cliente pelo nome"
+        placeholder="Pesquisar Cliente pelo Ficha..."
         onChangeText={changeValue}
         onBlur={unfocusDisplay}
         value={searchValue}
@@ -37,7 +37,7 @@ export default function BarraPesquisaClientes() {
       <View>
         {filteredClientes.map((cliente) => (
           <Text style={{ ...styles.cliente, display }} key={cliente.id}>
-            {cliente.nomecliente}
+            {cliente.ficha}
           </Text>
         ))}
       </View>
@@ -53,10 +53,11 @@ const styles = StyleSheet.create({
     backgroundColor: "#f1ebf7",
     borderBottomColor: "#f1ebf7",
     borderTopColor: "#f1ebf7",
+    paddingBottom: 0,
   },
   inputContainer: {
     backgroundColor: "white",
-    borderRadius: 8,
+    borderRadius: 2,
     height: 36,
   },
   input: {
@@ -66,8 +67,6 @@ const styles = StyleSheet.create({
     width: "96%",
     backgroundColor: "white",
     padding: 7,
-    borderRadius: 5,
-    marginBottom: 8,
     marginLeft: "auto",
     marginRight: "auto",
     fontSize: 16,

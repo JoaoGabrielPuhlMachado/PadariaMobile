@@ -8,7 +8,6 @@ import Carrinho from "./screens/Carrinho";
 import Clientes from "./screens/Clientes";
 import AdicionarClientes from "./screens/AdicionarClientes";
 
-
 const Stack = createNativeStackNavigator();
 
 export default function App() {
