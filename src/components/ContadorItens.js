@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
 
 export default class ContadorItens extends Component {
   state = {
-    contador: 100,
+    contador: 0,
   };
   incrementar() {
     this.setState({ contador: this.state.contador + 1 });

@@ -7,6 +7,7 @@ import Itens from "./screens/Itens";
 import Carrinho from "./screens/Carrinho";
 import Clientes from "./screens/Clientes";
 import AdicionarClientes from "./screens/AdicionarClientes";
+import AdicionarItens from "./screens/AdicionarItens";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,6 +21,7 @@ export default function App() {
           <Stack.Screen name="Carrinho" component={Carrinho} />
           <Stack.Screen name="Clientes" component={Clientes} />
           <Stack.Screen name="Adicionar Clientes" component={AdicionarClientes} />
+          <Stack.Screen name="Adicionar Itens" component={AdicionarItens} />
         </Stack.Navigator>
       </NavigationContainer>
     </PaperProvider>

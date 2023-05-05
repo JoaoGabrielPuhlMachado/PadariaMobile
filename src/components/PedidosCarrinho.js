@@ -32,6 +32,14 @@ function Card(props) {
 export default function PedidosCarrinho({ navigation }) {
   return (
     <ScrollView style={styles.background}>
+      <View>
+        <TouchableOpacity
+          onPress={() => navigation.navigate("Adicionar Itens")}
+          style={styles.additem}
+        >
+          <Text style={styles.textobotao}>Adicionar Itens</Text>
+        </TouchableOpacity>
+      </View>
       <View style={styles.content}>
         {infoprodutos.map((carrinho) => (
           <Card carrinho={carrinho} key={carrinho.id} />
@@ -40,7 +48,7 @@ export default function PedidosCarrinho({ navigation }) {
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("Clientes")}
-          style={styles.botaoadd}
+          style={styles.addcliente}
         >
           <Text style={styles.textobotao}>Salvar Cliente</Text>
         </TouchableOpacity>
@@ -68,9 +76,9 @@ const styles = StyleSheet.create({
     borderRadius: 0,
     marginLeft: "auto",
     marginRight: "auto",
-    marginTop: 5,
-    marginBottom: 0,
     borderRadius: 3,
+    marginTop: 5,
+    marginBottom: 5,
   },
   texto: {
     fontSize: 13,
@@ -79,13 +87,21 @@ const styles = StyleSheet.create({
     marginRight: 3,
     marginTop: 3,
   },
-  botaoadd: {
+  addcliente: {
     height: 45,
     width: "100%",
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",
-    marginTop: 10,
+    marginTop: 5,
+  },
+  additem: {
+    height: 45,
+    width: "100%",
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+    marginBottom: 5,
   },
   textobotao: {
     fontSize: 20,

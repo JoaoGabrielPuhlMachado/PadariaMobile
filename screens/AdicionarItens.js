@@ -1,12 +1,12 @@
 import React from "react";
 import { StyleSheet, View, ScrollView } from "react-native";
-import PedidosItens from "../src/components/PedidosItens";
+import AddItens from "../src/components/AddItens";
 
-export default function Itens() {
+export default function AdicionarItens({ navigation }) {
   return (
     <View style={styles.container}>
       <ScrollView>
-        <PedidosItens />
+        <AddItens navigation={navigation} />
       </ScrollView>
     </View>
   );
@@ -15,8 +15,8 @@ export default function Itens() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    flexDirection: 'column',
-    alignItems: 'center',
+    flexDirection: "column",
+    alignItems: "center",
     backgroundColor: "#f1ebf7",
-    },
-})
+  },
+});
