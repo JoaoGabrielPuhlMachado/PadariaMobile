@@ -34,7 +34,7 @@ export default function PedidosCarrinho({ navigation }) {
     <ScrollView style={styles.background}>
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Adicionar Itens")}
+          onPress={() => navigation.navigate("AdicionarItens")}
           style={styles.additem}
         >
           <Text style={styles.textobotao}>Adicionar Itens</Text>

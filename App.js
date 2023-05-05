@@ -23,15 +23,24 @@ export default function App() {
           <Stack.Screen name="Carrinho" component={Carrinho} />
           <Stack.Screen name="Clientes" component={Clientes} />
           <Stack.Screen
-            name="Adicionar Clientes"
+            name="AdicionarClientes"
             component={AdicionarClientes}
+            options={{ headerTitle: "Adicionar Clientes" }}
           />
-          <Stack.Screen name="AdicionarItens" component={AdicionarItens} />
-          <Stack.Screen name="Login" component={Login} options={{ headerTitle: "Login do Atendente" }}/>
+          <Stack.Screen
+            name="AdicionarItens"
+            component={AdicionarItens}
+            options={{ headerTitle: "Adicionar Itens" }}
+          />
+          <Stack.Screen
+            name="Login"
+            component={Login}
+            options={{ headerTitle: "Login do Atendente" }}
+          />
           <Stack.Screen
             name="PerfilLogado"
-            options={{ headerTitle: "Perfil do Atendente" }}
             component={PerfilLogado}
+            options={{ headerTitle: "Perfil do Atendente" }}
           />
         </Stack.Navigator>
       </NavigationContainer>

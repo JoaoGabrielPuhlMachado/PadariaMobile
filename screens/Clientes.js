@@ -23,13 +23,17 @@ export default function Clientes({ navigation }) {
       <BarraPesquisaClientes />
       <View>
         {infoclientes.map((cliente) => (
-          <DadosCliente cliente={cliente} navigation={navigation} />
+          <DadosCliente
+            cliente={cliente}
+            key={cliente.id_cliente}
+            navigation={navigation}
+          />
         ))}
       </View>
       <View style={styles.add}>
         <TouchableOpacity
           style={styles.botaoadd}
-          onPress={() => navigation.navigate("Adicionar Clientes")}
+          onPress={() => navigation.navigate("AdicionarClientes")}
         >
           <Text style={styles.texto}>Adicionar Cliente</Text>
         </TouchableOpacity>
@@ -45,7 +49,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   background: {
-    backgroundColor: '#f1ebf7',
+    backgroundColor: "#f1ebf7",
     flex: 1,
     justifyContent: "space-between",
   },
