@@ -23,7 +23,7 @@ export default function PedidosItens() {
         <BarraPesquisaItens />
         <View style={styles.content}>
           {infoprodutos.map((pedido) => (
-            <Card pedido={pedido} />
+            <Card pedido={pedido} key={pedido.id}/>
           ))}
         </View>
       </View>

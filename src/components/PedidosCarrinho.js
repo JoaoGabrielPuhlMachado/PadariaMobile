@@ -34,7 +34,7 @@ export default function PedidosCarrinho({ navigation }) {
     <ScrollView style={styles.background}>
       <View style={styles.content}>
         {infoprodutos.map((carrinho) => (
-          <Card carrinho={carrinho} />
+          <Card carrinho={carrinho} key={carrinho.id} />
         ))}
       </View>
       <View>

@@ -36,7 +36,7 @@ export default function BarraPesquisaClientes() {
       />
       <View>
         {filteredClientes.map((cliente) => (
-          <Text style={{ ...styles.cliente, display }} key={cliente.id}>
+          <Text style={{ ...styles.cliente, display }} key={cliente.id_cliente}>
             {cliente.ficha}
           </Text>
         ))}
