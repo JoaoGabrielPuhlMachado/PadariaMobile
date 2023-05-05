@@ -4,26 +4,12 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 export default function Home({ navigation }) {
   return (
     <View style={styles.background}>
-      <View style={styles.container}>
-        <TouchableOpacity
-          style={[
-            styles.botao,
-            { borderRightColor: "#f1ebf7", borderRightWidth: 1 },
-          ]}
-          onPress={() => navigation.navigate("Itens")}
-        >
-          <Text style={styles.texto}>Itens</Text>
-        </TouchableOpacity>
-        <TouchableOpacity
-          style={[
-            styles.botao,
-            { borderLeftColor: "#f1ebf7", borderLeftWidth: 1 },
-          ]}
-          onPress={() => navigation.navigate("Clientes")}
-        >
-          <Text style={styles.texto}>Clientes</Text>
-        </TouchableOpacity>
-      </View>
+      <TouchableOpacity
+        style={styles.botao}
+        onPress={() => navigation.navigate("Login")}
+      >
+        <Text style={styles.texto}>Login Atendente</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -34,14 +20,8 @@ const styles = StyleSheet.create({
     backgroundColor: "#f1ebf7",
     justifyContent: "flex-end",
   },
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "center",
-  },
   botao: {
-    flex: 1,
-    height: 40,
+    height: 45,
     backgroundColor: "white",
     alignItems: "center",
     justifyContent: "center",

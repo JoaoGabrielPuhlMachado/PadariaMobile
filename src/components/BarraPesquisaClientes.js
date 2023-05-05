@@ -23,7 +23,7 @@ export default function BarraPesquisaClientes() {
   return (
     <View>
       <SearchBar
-        placeholder="Pesquisar Cliente pelo Ficha..."
+        placeholder="Pesquisar Cliente pela Ficha..."
         onChangeText={changeValue}
         onBlur={unfocusDisplay}
         value={searchValue}

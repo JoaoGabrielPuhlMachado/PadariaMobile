@@ -1,46 +1,38 @@
 import React from "react";
-import { View, StyleSheet, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { TextInput } from "react-native-paper";
 
-export default function AdicionarClientes({ navigation }) {
+export default function Login({ navigation }) {
   return (
     <View style={styles.background}>
       <View>
-        <View style={styles.view}>
-          <Text style={styles.texto}>
-            Informações do Cliente e Seus Pedidos
-          </Text>
-        </View>
-        <TextInput label={"Nome do Cliente"} style={styles.input} />
-        <TextInput label={"Número da Ficha do Cliente"} style={styles.input} />
+        <TextInput label={"Nome do atendente"} style={styles.input} />
+        <TextInput label={"Email"} style={styles.input} />
+        <TextInput label={"Senha"} style={styles.input} />
       </View>
       <View>
         <TouchableOpacity
-          onPress={() => navigation.navigate("Clientes")}
+          onPress={() => navigation.navigate("PerfilLogado")}
           style={styles.botaoadd}
         >
-          <Text style={styles.texto}>Salvar Cliente</Text>
+          <Text style={styles.texto}>Fazer Login</Text>
         </TouchableOpacity>
       </View>
     </View>
   );
 }
+
 const styles = StyleSheet.create({
   input: {
     backgroundColor: "white",
     height: 60,
     width: "100%",
-    marginBottom: 10,
+    marginTop: 10,
   },
   background: {
     backgroundColor: "#f1ebf7",
     justifyContent: "space-between",
     flex: 1,
-  },
-  view: {
-    height: 40,
-    alignItems: "center",
-    justifyContent: "center",
   },
   botaoadd: {
     height: 45,
