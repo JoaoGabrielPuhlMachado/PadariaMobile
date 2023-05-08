@@ -18,16 +18,14 @@ function Card(props) {
 
 export default function PedidosItens() {
   return (
-    <ScrollView>
-      <View>
-        <BarraPesquisaItens />
-        <View style={styles.content}>
-          {infoprodutos.map((pedido) => (
-            <Card pedido={pedido} key={pedido.id}/>
-          ))}
-        </View>
+    <View>
+      <BarraPesquisaItens />
+      <View style={styles.content}>
+        {infoprodutos.map((pedido) => (
+          <Card pedido={pedido} key={pedido.id} />
+        ))}
       </View>
-    </ScrollView>
+    </View>
   );
 }
 

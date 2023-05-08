@@ -10,7 +10,7 @@ function DadosCliente(props) {
         style={styles.botao}
         onPress={() => props.navigation.navigate("Carrinho")}
       >
-        <Text style={styles.texto}>Ficha: {props.cliente.ficha}</Text>
+        <Text style={styles.textobotao}>Ficha: {props.cliente.ficha}</Text>
       </TouchableOpacity>
       <Text style={styles.status}>{props.cliente.status}</Text>
     </View>
@@ -30,18 +30,42 @@ export default function Clientes({ navigation }) {
           />
         ))}
       </View>
-      <View style={styles.add}>
+      <View style={styles.posicao}>
         <TouchableOpacity
           style={styles.botaoadd}
           onPress={() => navigation.navigate("AdicionarClientes")}
         >
-          <Text style={styles.texto}>Adicionar Cliente</Text>
+          <Text style={styles.textobotao}>Adicionar Cliente</Text>
         </TouchableOpacity>
+        <View style={styles.bottomtabs}>
+          <TouchableOpacity
+            style={[
+              styles.iritens,
+              { borderRightColor: "#f1ebf7", borderRightWidth: 1 },
+            ]}
+            onPress={() => navigation.navigate("Itens")}
+          >
+            <Text style={styles.textobotao}>Itens</Text>
+          </TouchableOpacity>
+          <TouchableOpacity
+            style={[
+              styles.iritens,
+              { borderLeftColor: "#f1ebf7", borderLeftWidth: 1 },
+            ]}
+            onPress={() => navigation.navigate("Clientes")}
+          >
+            <Text style={styles.textobotao}>Clientes</Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
 }
 const styles = StyleSheet.create({
+  posicao: {
+    position: "absolute",
+    bottom: 0,
+  },
   status: {
     fontSize: 17,
   },
@@ -51,7 +75,6 @@ const styles = StyleSheet.create({
   background: {
     backgroundColor: "#f1ebf7",
     flex: 1,
-    justifyContent: "space-between",
   },
   botao: {
     borderRadius: 5,
@@ -69,8 +92,18 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
-  texto: {
-    fontWeight: "bold",
+  iritens: {
+    height: 40,
+    width: "50%",
+    backgroundColor: "white",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  textobotao: {
     fontSize: 20,
+    fontWeight: "bold",
+  },
+  bottomtabs: {
+    flexDirection: "row",
   },
 });

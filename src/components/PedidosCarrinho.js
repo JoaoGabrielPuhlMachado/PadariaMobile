@@ -31,7 +31,7 @@ function Card(props) {
 
 export default function PedidosCarrinho({ navigation }) {
   return (
-    <ScrollView style={styles.background}>
+    <View style={styles.background}>
       <View>
         <TouchableOpacity
           onPress={() => navigation.navigate("AdicionarItens")}
@@ -53,7 +53,7 @@ export default function PedidosCarrinho({ navigation }) {
           <Text style={styles.textobotao}>Salvar Cliente</Text>
         </TouchableOpacity>
       </View>
-    </ScrollView>
+    </View>
   );
 }
 
