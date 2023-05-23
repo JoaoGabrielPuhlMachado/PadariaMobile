@@ -33,13 +33,13 @@ export default function Login({ navigation }) {
     <View style={styles.background}>
       <View>
         <TextInput
-          value="username"
+          value={username}
           onChangeText={setUsername}
           label={"Nome do atendente"}
           style={styles.input}
         />
         <TextInput
-          value="password"
+          value={password}
           label={"Senha"}
           onChangeText={setPassword}
           style={styles.input}
