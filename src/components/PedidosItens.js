@@ -1,4 +1,4 @@
-import { StyleSheet, Image, Text, View, ScrollView } from "react-native";
+import { StyleSheet, Image, Text, View } from "react-native";
 import BarraPesquisaItens from "./BarraPesquisaItens";
 import ContadorItens from "./ContadorItens";
 import { infoprodutos } from "./InfoProdutos";

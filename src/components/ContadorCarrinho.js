@@ -13,11 +13,17 @@ export default class ContadorCarrinho extends Component {
       this.setState({ contador: this.state.contador - 1 });
     }
   }
+  deletar(index) {
+    this.state.contador.splice(index, 1);
+    this.setState({
+      contador: this.state.contador,
+    });
+  }
   render() {
     return (
       <View>
         <View>
-          <TouchableOpacity><Text style={styles.texto}>Deletar</Text></TouchableOpacity>
+          <TouchableOpacity onPress={() => this.deletar()}><Text style={styles.texto}>Deletar</Text></TouchableOpacity>
         </View>
         <View style={{flexDirection: "row",marginRight: 10,alignItems: "center",}}>
           <TouchableOpacity style={[styles.button, {borderBottomLeftRadius: 5, borderTopLeftRadius: 5,}]} onPress={() => this.incrementar()}><Text>+</Text></TouchableOpacity>

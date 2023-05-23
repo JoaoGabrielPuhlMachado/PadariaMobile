@@ -4,6 +4,7 @@ import { StyleSheet, TouchableOpacity, Text, View } from "react-native";
 import { TextInput } from "react-native-paper";
 import { userState } from "../src/recoil/atoms/auth.js";
 import LoginApi from "../src/api/login";
+import * as SecureStore from 'expo-secure-store'
 const loginapi = new LoginApi();
 
 export default function Login({ navigation }) {
@@ -49,6 +50,7 @@ export default function Login({ navigation }) {
         <TouchableOpacity onPress={() => login()} style={styles.botaoadd}>
           <Text style={styles.texto}>Fazer Login</Text>
         </TouchableOpacity>
+      <Text>{errorMsg}</Text>
       </View>
     </View>
   );
